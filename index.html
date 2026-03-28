@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio website of Loay Shqair featuring projects, skills, and contact information." />
+  <title>Loay Shqair | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Loay Shqair</a>
+
+      <nav aria-label="Primary navigation" class="nav">
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button type="button" id="theme-toggle" aria-label="Toggle theme">Dark mode</button>
+      </nav>
+    </div>
+    <p id="greeting" class="greeting" aria-live="polite"></p>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Electrical Engineering + Computer Science</p>
+          <h1>Building systems that connect software, hardware, and real-world problem solving.</h1>
+          <p class="hero-text">
+            I am Loay Shqair, a student interested in combining electrical engineering and computer science in practical and creative ways.
+          </p>
+          <div class="hero-actions">
+            <a class="button-link" href="#projects">View Projects</a>
+            <a class="button-link button-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>What changed in Assignment 2</h2>
+          <ul>
+            <li>Live project search</li>
+            <li>Saved theme preference with localStorage</li>
+            <li>Improved form validation and feedback</li>
+            <li>Smoother transitions and clearer user states</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="profile-card">
+          <img
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'><rect width='500' height='500' fill='%23161b22'/><circle cx='250' cy='170' r='80' fill='%23c8d1e1'/><rect x='130' y='270' width='240' height='130' rx='28' fill='%23c8d1e1'/><text x='250' y='455' text-anchor='middle' font-family='Arial' font-size='28' fill='%23f5f7fb'>Portfolio Profile</text></svg>"
+            alt="Illustrated profile placeholder"
+          />
+          <p class="tagline"><strong>Knowledge is like cheese, there is no such thing as too much cheese.</strong></p>
+        </div>
+
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I enjoy projects that connect theory with implementation, especially when they involve control, computation, or intelligent systems.
+            My interests include electrical engineering, computer science, and building things that feel useful beyond the classroom.
+          </p>
+          <p>
+            This portfolio highlights a few academic projects and selected university courses that shaped my interests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected Courses</h2>
+          <p>A small course table added to make the portfolio more informative.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Area</th>
+                <th>What I practiced</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Signals and Systems</td>
+                <td>Electrical Engineering</td>
+                <td>Signal analysis, transforms, and system behavior</td>
+              </tr>
+              <tr>
+                <td>Data Structures and Algorithms</td>
+                <td>Computer Science</td>
+                <td>Efficiency, recursion, graph search, and algorithm design</td>
+              </tr>
+              <tr>
+                <td>Computer Organization</td>
+                <td>Hardware / Systems</td>
+                <td>Instruction execution, datapaths, and processor design</td>
+              </tr>
+              <tr>
+                <td>Object-Oriented Programming</td>
+                <td>Software Development</td>
+                <td>Program structure, abstraction, and Java-based design</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading projects-header">
+          <div>
+            <h2>Projects</h2>
+            <p>Search the cards below to filter projects live while typing.</p>
+          </div>
+
+          <div class="search-panel">
+            <label for="project-search">Search projects</label>
+            <input
+              type="search"
+              id="project-search"
+              placeholder="Try: java, processor, search, logisim"
+              aria-describedby="search-help"
+            />
+            <p id="search-help" class="help-text">The list updates instantly based on your input.</p>
+          </div>
+        </div>
+
+        <p id="results-count" class="results-count" aria-live="polite"></p>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="project-card" data-title="RISC Processor Design" data-tags="processor logisim risc hardware pipeline single cycle">
+            <div class="project-visual" aria-hidden="true">RISC</div>
+            <h3><a href="https://github.com/LostPositron/251-COE301.git" target="_blank" rel="noreferrer">RISC Processor Design</a></h3>
+            <p>
+              Implemented a RISC processor based on a given instruction set, including both single-cycle and pipelined versions using Logisim.
+            </p>
+            <span class="project-tag">Logisim</span>
+          </article>
+
+          <article class="project-card" data-title="Path-Finding Agent" data-tags="java graph search maze shortest path algorithms ai">
+            <div class="project-visual" aria-hidden="true">AI</div>
+            <h3><a href="https://github.com/LostPositron/242-ICS202.git" target="_blank" rel="noreferrer">Path-Finding Agent</a></h3>
+            <p>
+              Built a Java program that searches for the shortest safe path to a treasure in a maze using graph-state modeling and multiple search algorithms.
+            </p>
+            <span class="project-tag">Java</span>
+          </article>
+
+          <article class="project-card" data-title="Portfolio Website" data-tags="html css javascript responsive frontend web portfolio">
+            <div class="project-visual" aria-hidden="true">WEB</div>
+            <h3><a href="#hero">Portfolio Website</a></h3>
+            <p>
+              Developed a responsive personal portfolio and extended it with dynamic interaction, theme persistence, and clearer user feedback.
+            </p>
+            <span class="project-tag">JavaScript</span>
+          </article>
+        </div>
+
+        <p id="empty-state" class="empty-state" hidden>No projects found. Try a different keyword.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt-section">
+      <div class="container contact-layout">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            This form demonstrates input validation and user feedback. It does not send real messages yet.
+          </p>
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
